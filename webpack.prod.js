@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
@@ -9,21 +11,21 @@ module.exports = merge(common, {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
               [
-                "@babel/preset-env",
+                '@babel/preset-env',
                 {
-                  targets: "> 0.25%, not dead"
-                }
+                  targets: '> 0.25%, not dead',
+                },
               ],
-              "@babel/preset-typescript"
-            ]
-          }
-        }
+              '@babel/preset-typescript',
+            ],
+          },
+        },
       },
-    ]
+    ],
   },
   target: ['web', 'es5'],
 });
