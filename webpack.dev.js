@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable @typescript-eslint/no-var-requires */
+// @ts-nocheck
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 

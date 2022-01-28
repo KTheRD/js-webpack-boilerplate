@@ -1,4 +1,6 @@
 *.css
 *.svg
+index.html
 build/*
 node_modules/*
+webpack.*.js
