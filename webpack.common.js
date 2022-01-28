@@ -10,18 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, `build`),
     clean: true,
   },
-  target: ['web', 'es5'],
   module: {
     rules: [
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-typescript"]
-          }
-        }
+        use: "babel-loader"
       },
     ]
   },
