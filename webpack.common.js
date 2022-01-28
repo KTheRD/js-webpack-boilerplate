@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.ts',
+    app: './src/index.tsx',
   },
   output: {
     filename: '[name].bundle.js',
@@ -28,6 +28,7 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         title: 'Boilerplate',
+        template: 'index.html',
       },
     ),
   ],

@@ -20,6 +20,7 @@ module.exports = merge(common, {
                   targets: '> 0.25%, not dead',
                 },
               ],
+              '@babel/preset-react',
               '@babel/preset-typescript',
             ],
           },
