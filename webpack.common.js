@@ -1,29 +1,34 @@
-const path = require(`path`);
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: `./src/index.ts`
+    app: './src/index.ts',
   },
   output: {
-    filename: `[name].bundle.js`,
-    path: path.resolve(__dirname, `build`),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'build'),
     clean: true,
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '...'],
   },
   module: {
     rules: [
       {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: 'babel-loader',
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin(
       {
-        title: "Boilerplate",
-      }
+        title: 'Boilerplate',
+      },
     ),
   ],
 };
